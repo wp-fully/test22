@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>معرض الوسائط الاحترافي</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <h1 class="header-title">
+                <i class="fas fa-images"></i>
+                معرض الوسائط
+            </h1>
+            <p class="header-subtitle">مجموعة مميزة من الصور والفيديوهات</p>
+        </div>
+    </header>
+
+    <!-- Filter Buttons -->
+    <div class="filter-container">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">
+                    <i class="fas fa-layer-group"></i>
+                    الكل
+                </button>
+                <button class="filter-btn" data-filter="image">
+                    <i class="fas fa-image"></i>
+                    الصور
+                </button>
+                <button class="filter-btn" data-filter="video">
+                    <i class="fas fa-video"></i>
+                    الفيديوهات
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery -->
+    <main class="gallery-container">
+        <div class="container">
+            <div class="gallery-grid" id="gallery"></div>
+        </div>
+    </main>
+
+    <!-- Lightbox Modal -->
+    <div class="lightbox-overlay" id="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="closeLightbox">
+                <i class="fas fa-times"></i>
+            </button>
+            <div class="lightbox-media" id="lightboxMedia"></div>
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <div class="lightbox-actions">
+                    <button class="action-btn download-btn" id="downloadBtn">
+                        <i class="fas fa-download"></i>
+                        تحميل
+                    </button>
+                </div>
+            </div>
+            <div class="lightbox-navigation">
+                <button class="nav-btn prev-btn" id="prevBtn">
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <button class="nav-btn next-btn" id="nextBtn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div class="loading-spinner" id="loading">
+        <div class="spinner"></div>
+        <p>جاري التحميل...</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
